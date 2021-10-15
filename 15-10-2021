@@ -1,0 +1,143 @@
+## 15/10/2021
+
+```c
+//
+//  main.c
+//  C-Learning
+//
+//  Created by Filip Vabroušek on 15.10.2021.
+//
+
+#include <stdio.h>
+#include <string.h>
+
+void myFunction(){
+    printf("I am in a function.");
+}
+
+double area(double a, double b){
+    return a * b;
+}
+
+// area(3, 3)
+
+// Structure
+typedef struct _Person {
+    char name[20];
+    int age;
+} Person;
+
+
+int main() {
+    
+    // 1 ------------------------  Hello World + Data types + Comments
+    // type name = value
+    
+    printf("Hello world! \n"); // new line \n
+    
+    int pi = 3;
+    double piDouble = 3.14;
+    
+    char name[] = "Filip";
+    
+    printf("%s", name);
+    printf("My name is %s! \n", name);
+    
+    
+    /*
+     double data[10];
+     double values = {2, 4, 6, 8};
+     */
+    
+    // Arrays
+    double data[10];
+    data[0] = 21.0;
+    data[1] = 25.0;
+    printf("First position: %f \n", data[0]);
+    
+    double values [] = {2, 4, 6, 8};
+    values[1] = 20.0;
+    printf("First position: %f \n", values[0]);
+    
+    /*
+     Multi lines
+     of text
+     */
+    
+    // 2 ------------------------  if/else + changing value
+    
+    int age = 17;
+    
+    if (age >= 18){
+        printf("You can drive the car. \n");
+        // ...
+    } else if (age > 15) {
+        printf("You can drive motocycle \n");
+    } else {
+        printf("You are too young. \n");
+    }
+    
+    printf("Age is %d \n", age);
+    
+
+    // Changing value of a variable
+    age = 22;
+    
+    printf("Age is %d \n", age);
+    
+    printf("\n");
+    printf("\n");
+    
+    
+    
+    
+    
+    // 3 ------------------------ Functions
+    myFunction();
+    
+    double result = area(2, 3); // 6
+    printf("%f \n", result);
+    
+    
+    // 4 ------------------------ Struct
+    
+    /*
+     MUST BE OUTSIDE main()
+     void myFunction(){
+         printf("I am in a function.");
+     }
+
+     double area(double a, double b){
+         return a * b;
+     }
+     */
+    
+    
+    
+    
+    /*
+     MUST BE OUTSIDE main()
+     typedef struct _Person {
+         char name[20];
+         int age;
+     } Person;
+     */
+    
+    Person me;
+    strcpy(me.name, "Filip");
+    me.age = 22;
+    
+    printf("Name is %s, age is %d \n", me.name, me.age);
+    // Name is Filip, age is 22
+    
+    // me.name = "Filip"; => NELZE musíme použít strcpy
+    
+    
+    
+   
+    return 0;
+}
+
+
+
+```
